@@ -4,7 +4,7 @@
 // ---------------------------------------------------------------------------
 
 $primary          : #00aa5b;
-$secondary        : #FF6C35;
+$secondary        : #4C8BB8;
 $tertiary         : #808184;
 $light            : #FFF;
 $dark             : #333;
@@ -12,7 +12,7 @@ $text-dark        : #212121;
 $text-light       : $light;
 $code-background  : #F8F8F8;
 $overlay          : transparentize(#000, .5);
-$font-size        : 28px;
+$font-size        : 30px;
 $font-size-impact : 128px;
 $font             : 'Droid Serif', Arial, Helvetica, sans-serif;
 $font-title       : 'Droid Serif', Arial, Helvetica, sans-serif;
@@ -55,7 +55,7 @@ blockquote {
 // Remark base
 // ---------------------------------------------------------------------------
 
-.remark-code { font-size: .9em; }
+.remark-code { font-size: .8em; }
 .remark-container { background: $dark; }
 .remark-slide-scaler { box-shadow: none; }
 .remark-notes { font-size: 1.5em; }
@@ -91,6 +91,12 @@ blockquote {
   text-align: center;
   &, h1, h2 { color: $text-light; }
   h1 { font-size: $font-size-impact; }
+}
+
+.quote {
+  display: block;
+  vertical-align: middle;
+  padding-top: 2em;
 }
 
 

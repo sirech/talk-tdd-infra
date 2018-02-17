@@ -32,7 +32,7 @@ class: impact no-counter
 
 # Infrastructure as Code
 
-.middle.huge[[IaC](http://infrastructure-as-code.com/) means writing code to manage configurations and automate provisioning]
+.quote.huge[[IaC](http://infrastructure-as-code.com/) means writing code to manage configurations and automate provisioning]
 
 ---
 
@@ -40,14 +40,14 @@ class: impact no-counter
 
 --
 
+.space-top[
 ### Enter [**ServerSpec**](http://serverspec.org)
-
 .center[![serverspec](images/serverspec.png)]
+]
 
 --
 
-
-*ServerSpec* is a tool to write tests for infrastructure based on [RSpec](http://rspec.info/)
+.space-top[*ServerSpec* is a tool to write tests for infrastructure based on [RSpec](http://rspec.info/)]
 
 ---
 
@@ -105,13 +105,11 @@ spec/hostname/files_spec.rb
 
 ```ruby
   describe file('/vault/file') do
-    it { is_expected.to exist }
     it { is_expected.to be_directory }
     it { is_expected.to be_owned_by 'vault' }
   end
 
   describe file('/bin/vault') do
-    it { is_expected.to exist }
     it { is_expected.to be_executable }
     it { is_expected.to be_owned_by 'root' }
   end
@@ -220,7 +218,7 @@ class: transition
 
 # ServerSpec
 
-.huge[
+.quote.huge[
 *ServerSpec* is a good way to automate the process of testing infrastructure
 ]
 
@@ -245,6 +243,6 @@ class: transition
 
 class: impact no-counter
 
-# Thank you!
+# Thank you
 ## Questions?
 
