@@ -130,6 +130,11 @@ blockquote {
   width: 512px;
 }
 
+.gif img {
+  height: 590px;
+  margin-top: -1em;
+}
+
 
 // Utilities
 // ---------------------------------------------------------------------------
@@ -154,7 +159,7 @@ blockquote {
 .no-padding { padding: 0; }
 .space-left { padding-left: 1em; }
 .space-right { padding-right: 1em; }
-.space-top { padding-top: 1em; }
+.space-top { margin: 2em; }
 
 // Images
 .responsive > img { width: 100%; height: auto; };

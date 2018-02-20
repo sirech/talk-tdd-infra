@@ -16,23 +16,44 @@ class: impact no-counter
 
 ---
 
+.quote.huge.space-top[**TDD:** Test Driven Development]
+
+---
+
+.quote.huge.space-top[Part of *Extreme Programming*, started in 1999]
+
+---
+
 # TDD in a nutshell
 
 .col-6[
 ![TDD](images/tdd.png)
 ]
 
+--
+
 .col-6[
 1. Write the only the code that is needed
 2. Get quick feedback
 3. Build a modular design
 ]
+---
+
+class: transition
+
+# You knew that already
 
 ---
 
 # Infrastructure as Code
 
 .quote.huge[[IaC](http://infrastructure-as-code.com/) means writing code to manage configurations and automate provisioning]
+
+---
+
+# Infrastructure as Code
+
+.middle.center.space-top[![IaC](images/iac.png)]
 
 ---
 
@@ -207,6 +228,37 @@ describe 'SpringBoot Applicationn' do
   end
 end
 ```
+
+---
+
+
+class: transition
+
+# You can go crazy with this stuff
+
+---
+
+## External dependencies via docker-compose
+
+```ruby
+describe 'SpringBoot Application' do
+  set :docker_container, 'app-springboot'
+
+  before(:all) do
+    compose.up(VAULT_CONTAINER_NAME, detached: true)
+    vault.logical.write('secret/app/worspace, foo: :bar)
+    compose.up('app-springboot', detached: true)
+  end
+
+  describe process('java') do
+    it { is_expected.to be_running }
+  end
+end
+```
+
+---
+
+.gif.center[![Demo](images/tty.gif)]
 
 ---
 
