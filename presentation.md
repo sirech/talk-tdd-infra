@@ -246,7 +246,7 @@ describe 'SpringBoot Application' do
 
   before(:all) do
     compose.up(VAULT_CONTAINER_NAME, detached: true)
-    vault.logical.write('secret/app/worspace, foo: :bar)
+    vault.logical.write('secret/app/worspace', foo: :bar)
     compose.up('app-springboot', detached: true)
   end
 
