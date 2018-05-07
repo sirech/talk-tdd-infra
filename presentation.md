@@ -3,6 +3,7 @@ class: animation-fade
 layout: true
 
 <!-- This slide will serve as the base layout for all your slides -->
+
 .bottom-bar[
   {{title}}
 ]
@@ -16,11 +17,13 @@ class: impact no-counter
 
 ---
 
-.quote.huge.space-top[**TDD:** Test Driven Development]
+class: impact no-counter
+
+# TDD
 
 ---
 
-.quote.huge.space-top[Part of *Extreme Programming*, started in 1999]
+.quote.huge.space-top[**TDD:** Test Driven Development]
 
 ---
 
@@ -45,19 +48,25 @@ class: transition
 
 ---
 
+class: impact no-counter
+
+# Infrastructure
+
+---
+
+# Infrastructure as Code
+
+.iac.center[![IaC](images/IaC.gif)]
+
+---
+
 # Infrastructure as Code
 
 .quote.huge[[IaC](http://infrastructure-as-code.com/) means writing code to manage configurations and automate provisioning]
 
 ---
 
-# Infrastructure as Code
-
-.middle.center.space-top[![IaC](images/iac.png)]
-
----
-
-# How to make sure everything works as expected?
+# How do you test infrastructure?
 
 --
 
@@ -160,7 +169,15 @@ class: transition
 
 ---
 
-# Testing Docker images
+# Isn't this covered by provisioning tools?
+
+.tf.center[
+![terraform](images/terraform.png)
+]
+
+---
+
+# Containers
 
 .docker.middle.center.space-top[
 ![docker](images/docker.png)
